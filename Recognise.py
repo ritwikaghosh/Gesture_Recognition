@@ -17,11 +17,19 @@ def recognise(img):
     #hull_inv = cv2.convexHull(cnt, returnPoints=False)
     epsilon = 0.02*cv2.arcLength(cnt,True)
     poly = cv2.approxPolyDP(cnt,epsilon,True)
-    print(len(poly))
+    flag = len(poly)
+    print(flag)
+    if(flag<=8)
+        #insert logic for off
+    else
+        #insert logic for on
+
+
+
     cv2.drawContours(img, [poly], 0, (0, 255, 0), 3)
-    cv2.imshow('Otsu_Result', img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    #cv2.imshow('Otsu_Result', img)
+    #cv2.waitKey(0)
+    #cv2.destroyAllWindows()
 
 
 # def distance(a, b):
