@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-
+f=open("onoff.txt","w")
 
 def recognise(img):
     img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -19,9 +19,11 @@ def recognise(img):
     poly = cv2.approxPolyDP(cnt,epsilon,True)
     flag = len(poly)
     print(flag)
-    if(flag<=8)
+    if(flag<=8):
+        f.write("0")
         #insert logic for off
-    else
+    else:
+        f.write("1")
         #insert logic for on
 
 
